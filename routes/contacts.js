@@ -3,7 +3,7 @@ const { MongoClient, ObjectId } = require("mongodb");
 
 // getting the data
 async function main(req, res) {
-  const client = new MongoClient(process.env.MONGO_URI);
+  const client = new MongoClient(process.env.MONGO_URI, {useNewUrlParser:true, useUnifiedTopology: true});
   try {
     await client.connect();
     await listContacts(client);
@@ -24,8 +24,8 @@ async function listContacts(client) {
 
 async function singleContact(client, req, res){
   databasesList = await client.db('cse341-node');
-  const single = await databasesList.collection("contacts").findOne({_id: new ObjectId(req.query.id)});
-  res.send(single)
+  databasesList.collection("contacts").findOne({_id: new ObjectId(req.query.id)}).then(single => {res.send(single)}).catch(e => {console.log(e)});
+  
 }
 
 module.exports = main;
