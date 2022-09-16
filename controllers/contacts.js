@@ -8,7 +8,8 @@ async function main(req, res) {
     await singleContact(client, req, res);
   } catch (e) {
     console.error(e);
-  } finally {
+  } 
+  finally {
     await client.close();
   }
 }
@@ -26,4 +27,4 @@ async function singleContact(client, req, res){
   res.send(single)
 }
 
-module.exports = {listContacts, singleContact}
+module.exports = main;
