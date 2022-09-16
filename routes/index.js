@@ -6,6 +6,6 @@ const routes = require('express').Router();
 // routes.get('/', displayName);
 // routes.get('/', main);
 
-routes.use('/contactsTest', require('./contactsTest'))
+routes.get('/', require('./contacts'))
 
 module.exports = routes;  
