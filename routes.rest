@@ -20,19 +20,19 @@ GET http://localhost:8080/contacts/6324c731c7489f61e6063f5c
 
 //Render
 ### All
-GET http://localhost:8080/contacts
+GET https://tauriel341.onrender.com/contacts
 
 ### Naesalia
-GET http://localhost:8080/contacts/?id=6324c52fc7489f61e6063f58 
+GET https://tauriel341.onrender.com/contacts/6324c52fc7489f61e6063f58 
 
 ### Maethoriel
-GET http://localhost:8080/contacts/?id=6324c58ec7489f61e6063f59
+GET https://tauriel341.onrender.com/contacts/6324c58ec7489f61e6063f59
 
 ### Kaikani
-GET http://localhost:8080/contacts/?id=6324c655c7489f61e6063f5a
+GET https://tauriel341.onrender.com/contacts/6324c655c7489f61e6063f5a
 
 ### Shawn
-GET http://localhost:8080/contacts/?id=6324c6b1c7489f61e6063f5b
+GET https://tauriel341.onrender.com/contacts/6324c6b1c7489f61e6063f5b
 
 ### Riaxa
-GET http://localhost:8080/contacts/?id=6324c731c7489f61e6063f5c
+GET https://tauriel341.onrender.com/contacts/6324c731c7489f61e6063f5c
