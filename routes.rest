@@ -1,3 +1,13 @@
 //Local Host: 
+### Naesalia
+GET http://localhost:8080/contacts/?id=6324c52fc7489f61e6063f58 
 
-GET http://localhost:8080/?id=6324c52fc7489f61e6063f58 
+### Maethoriel
+GET http://localhost:8080/contacts/?id=6324c58ec7489f61e6063f59
+
+//Render
+### Maethoriel
+GET http://tauriel341/contacts/?id=6324c58ec7489f61e6063f59 
+
+### Riaxa
+GET http://tauriel341?/id=6324c731c7489f61e6063f5c  
