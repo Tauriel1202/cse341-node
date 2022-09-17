@@ -1,7 +1,7 @@
 const { MongoClient, ObjectId } = require("mongodb");
 
 async function main(req, res) {
-  const client = new MongoClient(process.env.MONGO_URI);
+  const client = new MongoClient(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
   try {
     await client.connect();
     await listContacts(client);
