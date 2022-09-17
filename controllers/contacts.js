@@ -1,7 +1,7 @@
 const { MongoClient, ObjectId } = require("mongodb");
 
 async function main(req, res) {
-  const client = new MongoClient(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
+  const client = new MongoClient(process.env.MONGO_URI);
   try {
     await client.connect();
     await listContacts(client);
@@ -15,15 +15,17 @@ async function main(req, res) {
 }
 main().catch(console.error);
 
-async function listContacts(client) {
+async function listContacts(client, req, res) {
   databasesList = await client.db("cse341-node");
   const contacts = await databasesList.collection("contacts").find().toArray();
   console.log(contacts);
+  // res.send(contacts)
 }
 
 async function singleContact(client, req, res){
   databasesList = await client.db('cse341-node');
   const single = await databasesList.collection("contacts").findOne({_id: new ObjectId(req.query.id)});
+  // const single = await databasesList.collection("contacts").findOne({_id: new ObjectId(userId)});
   res.send(single)
 }
 
