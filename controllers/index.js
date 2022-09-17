@@ -1,5 +1,5 @@
 function displayName(req, res) {
-  const name = `🌳🌊 ${req.query.id} 🌲`;
+  const name = `🌳🌊 Maethoriel 🌲`;
   res.send(name);
 }
 

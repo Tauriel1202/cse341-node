@@ -1,12 +1,11 @@
 //routes -- brings in express and functions
 const routes = require('express').Router();
+
 // const displayName = require('../controllers/index');
-// const main = require('../routes/contacts');
-
 // routes.get('/', displayName);
-// routes.get('/', main);
-const contacts = require('../controllers/contacts')
 
+const contacts = require('./contacts')
 routes.use('/contacts', contacts)
 
+console.log('index.js')
 module.exports = routes;  

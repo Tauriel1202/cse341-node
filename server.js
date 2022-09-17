@@ -8,8 +8,8 @@ const dotevn = require("dotenv");
 dotevn.config();
 
 //bringing in the routes
-app.use("/", require("./routes/index"));
-
+app.use("/", require("./routes"));
+console.log('server.js')
 //port working
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
