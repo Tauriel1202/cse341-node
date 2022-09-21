@@ -7,5 +7,5 @@ const routes = require('express').Router();
 const contacts = require('./contacts')
 routes.use('/contacts', contacts)
 
-console.log('index.js')
+// console.log('index.js')
 module.exports = routes;  

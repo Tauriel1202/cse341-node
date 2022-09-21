@@ -17,6 +17,25 @@ GET http://localhost:8080/contacts/6324c6b1c7489f61e6063f5b
 ### Riaxa
 GET http://localhost:8080/contacts/6324c731c7489f61e6063f5c
 
+###Add a friend
+POST http://localhost:8080/contacts 
+Content-Type: application/json
+
+# {"firstname": "DeleteMe!", "lastname": "Idonotbelong", "email": "opleasedeleteme@remove.go", "favColor": "red and black", "bday": "1977-02-28T02:00:00.000Z"}
+# {"firstname": "Méren", "lastname": "Noldotor", "email": "futurechiefess@lamond.com", "favColor": "orange", "bday": "2002-04-25T02:00:00.000Z"}
+{"firstname": "Bálor", "lastname": "Kingsail", "email": "supremesailor@needafish.com", "favColor": "forest green", "bday": "1997-07-23T02:00:00.000Z"}
+
+###Update data
+PUT http://localhost:8080/contacts/6324c6b1c7489f61e6063f5b 
+Content-Type: application/json
+
+# {"firstname": "Shawn", "lastname": "Thurodre", "email": "iamawesome@trivolcano.com", "favColor": "grey", "bday": "2000-01-10T03:00:00.000Z"}
+{"firstname": "Elethial", "lastname": "Noraskosen", "email": "healertwin@taurenor.com", "favColor": "yellow", "bday": "2000-06-01T04:00:00.000Z"}
+
+
+###Delete 
+DELETE http://localhost:8080/contacts/632b8f8fcc14fa83dfcc2182 HTTP/1.1
+
 
 //Render
 ### All
