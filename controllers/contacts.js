@@ -2,6 +2,8 @@ const { MongoClient, ObjectId } = require('mongodb');
 
 console.log('controllers');
 
+const apiKey = 'https://tauriel341.onrender.com/contacts';
+
 async function single(req, res, next) {
   const uri = process.env.MONGO_URI.replace('cse341-node', 'contacts');
   const client = new MongoClient(uri);
@@ -10,7 +12,6 @@ async function single(req, res, next) {
     .collection('contacts')
     .findOne({ _id: new ObjectId(req.params.id) })
     .then((all) => {
-      res.setHeader('Content-Type', 'application/json');
       console.log(all);
       res.send(all);
       next();
@@ -48,8 +49,8 @@ async function newContact(req, res) {
     email: req.body.email,
     favColor: req.body.favColor,
     bday: req.body.bday
-  })
-  console.log('Status: 201')
+  });
+  console.log('Status: 201');
 }
 
 async function updateContact(req, res) {
