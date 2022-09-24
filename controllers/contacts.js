@@ -2,8 +2,6 @@ const { MongoClient, ObjectId } = require('mongodb');
 
 console.log('controllers');
 
-const apiKey = 'https://tauriel341.onrender.com/contacts';
-
 async function single(req, res, next) {
   const uri = process.env.MONGO_URI.replace('cse341-node', 'contacts');
   const client = new MongoClient(uri);
@@ -13,6 +11,7 @@ async function single(req, res, next) {
     .findOne({ _id: new ObjectId(req.params.id) })
     .then((all) => {
       console.log(all);
+      // res.setHeader('Content-Type', 'application/json');
       res.send(all);
       next();
     })
@@ -31,6 +30,7 @@ async function all(req, res) {
     .toArray()
     .then((all) => {
       console.log(all);
+      // res.setHeader('Content-Type', 'application/json');
       res.send(all);
     })
     .catch((e) => {
@@ -70,8 +70,9 @@ async function updateContact(req, res) {
       }
     }
   );
+  // res.setHeader('Content-Type', 'application/json');
   console.log('Status: 204');
-  res.redirect('/');
+  // res.redirect('/');
 }
 
 async function deleteContact(req, res) {
@@ -80,8 +81,9 @@ async function deleteContact(req, res) {
   const dbo = client.db('cse341-node');
   const deleteContact = await dbo.collection('contacts');
   deleteContact.deleteOne({ _id: new ObjectId(req.params.id) });
+  // res.setHeader('Content-Type', 'application/json');
   console.log('Status: 200');
-  res.redirect('http://localhost:8080/contacts');
+  // res.redirect('http://localhost:8080/contacts');
 }
 
 module.exports = { single, all, newContact, updateContact, deleteContact };

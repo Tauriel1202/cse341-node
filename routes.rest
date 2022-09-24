@@ -21,18 +21,33 @@ GET http://localhost:8080/contacts/6324c731c7489f61e6063f5c
 POST http://localhost:8080/contacts 
 Content-Type: application/json
 
-# {"firstname": "DeleteMeLocally!", "lastname": "Imlocal", "email": "removemealready@goodbye.go", "favColor": "mud", "bday": "1977-08-12T02:00:00.000Z"}
-{"firstname": "Méren", "lastname": "Noldotor", "email": "futurechiefess@lamond.com", "favColor": "orange", "bday": "2002-04-25T02:00:00.000Z"}
+{"firstname": "DeleteMeLocally!", "lastname": "Imlocal", "email": "removemealready@goodbye.go", "favColor": "mud", "bday": "1977-08-12T02:00:00.000Z"}
+### {"firstname": "Méren", "lastname": "Noldotor", "email": "futurechiefess@lamond.com", "favColor": "orange", "bday": "2002-04-25T02:00:00.000Z"}
+### {
+###     "firstname": "Béren",
+###     "lastname": "Kingsail",
+###     "email": "wishisail@lamond.com",
+###     "favColor": "red",
+###     "bday": "1995-07-25T02:00:00.000Z"
+###   }
 
 ###Update data
-PUT http://localhost:8080/contacts/6324c6b1c7489f61e6063f5b 
+PUT http://localhost:8080/contacts/632e45d42634ce1695e47ff0
 Content-Type: application/json
 
-{"firstname": "Shawn", "lastname": "Thurodre", "email": "iamawesome@trivolcano.com", "favColor": "grey", "bday": "2000-01-10T03:00:00.000Z"}
+{
+    "firstname": "Béren",
+    "lastname": "Kingsail",
+    "email": "berenseal@lamond.com",
+    "favColor": "red",
+    "bday": "1995-07-25T02:00:00.000Z"
+  }
+
+### {"firstname": "Test", "lastname": "Dude", "email": "iamawesome@trivolcano.com", "favColor": "grey", "bday": "2000-01-10T03:00:00.000Z"}
 ### {"firstname": "Elethial", "lastname": "Noraskosen", "email": "healertwin@taurenor.com", "favColor": "yellow", "bday": "2000-06-01T04:00:00.000Z"}
 
 ###Delete 
-DELETE http://localhost:8080/contacts/632b95b00cf9454b2bb08c7c HTTP/1.1
+DELETE http://localhost:8080/contacts/632e2dbc417a8d3fc267b591 HTTP/1.1
 
 
 //Render

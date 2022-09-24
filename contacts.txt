@@ -1,0 +1,14 @@
+{
+  "firstname": "Jade",
+  "lastname": "Lonsib",
+  "email": "elrosbest@jade.com",
+  "favColor": "jade",
+  "bday": "03/13/2012"
+},
+{
+  "firstname": "Galadriel",
+  "lastname": " ",
+  "email": "commandernelves@valinor.org",
+  "favColor": "white and gold"
+  "bday": "04/28/12
+}
