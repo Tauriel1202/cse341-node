@@ -13,6 +13,7 @@ async function single(req, res, next) {
       console.log(all);
       // res.setHeader('Content-Type', 'application/json');
       res.send(all);
+      res.status(200).send();
       next();
     })
     .catch((e) => {
@@ -32,6 +33,7 @@ async function all(req, res) {
       console.log(all);
       // res.setHeader('Content-Type', 'application/json');
       res.send(all);
+      res.status(200).send();
     })
     .catch((e) => {
       console.log(e);
@@ -50,7 +52,7 @@ async function newContact(req, res) {
     favColor: req.body.favColor,
     bday: req.body.bday
   });
-  console.log('Status: 201');
+  res.status(201).send();
 }
 
 async function updateContact(req, res) {
@@ -71,7 +73,7 @@ async function updateContact(req, res) {
     }
   );
   // res.setHeader('Content-Type', 'application/json');
-  console.log('Status: 204');
+  res.status(204).send();
   // res.redirect('/');
 }
 
@@ -82,7 +84,7 @@ async function deleteContact(req, res) {
   const deleteContact = await dbo.collection('contacts');
   deleteContact.deleteOne({ _id: new ObjectId(req.params.id) });
   // res.setHeader('Content-Type', 'application/json');
-  console.log('Status: 200');
+  res.status(200).send();
   // res.redirect('http://localhost:8080/contacts');
 }
 
