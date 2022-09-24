@@ -32,8 +32,8 @@ async function all(req, res) {
     .then((all) => {
       console.log(all);
       // res.setHeader('Content-Type', 'application/json');
-      res.send(all);
-      res.status(200).send();
+      res.status(200).send(all);
+      // res.send(all);
     })
     .catch((e) => {
       console.log(e);

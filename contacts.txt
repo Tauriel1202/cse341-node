@@ -11,4 +11,11 @@
   "email": "commandernelves@valinor.org",
   "favColor": "white and gold"
   "bday": "04/28/12
+},
+{
+  "firstname": "Annabeth",
+  "lastname": "Chase",
+  "email": "camphbpercy@architect.org",
+  "favColor": "sea-green",
+  "bday": "07/18/2002"
 }
