@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   res.setHeader('Content-Type', 'application/json');
   */
   // res.setHeader("Content-Type", "text/plain")
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   next();
 });
 
